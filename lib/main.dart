@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_components_1/screens/listview1_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +11,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: Scaffold(
-          appBar: AppBar(title: const Text('Material App Bar')),
-          body: const Center(
-            child: Text('Hello world'),
-          )),
-    );
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        home: ListView1Screen());
   }
 }
