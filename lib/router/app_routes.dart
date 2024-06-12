@@ -15,22 +15,22 @@ class AppRoutes {
         screen: const HomeScreen()),
     MenuOption(
         route: 'listview1',
-        icon: Icons.home,
+        icon: Icons.list,
         name: 'Lista 1',
         screen: const ListView1Screen()),
     MenuOption(
         route: 'listview2',
-        icon: Icons.home,
+        icon: Icons.list,
         name: 'Lista 2',
         screen: const ListView2Screen()),
     MenuOption(
         route: 'card',
-        icon: Icons.home,
+        icon: Icons.card_giftcard,
         name: 'Card',
         screen: const CardScreen()),
     MenuOption(
         route: 'alet',
-        icon: Icons.home,
+        icon: Icons.warning_outlined,
         name: 'Alert',
         screen: const AlertScreen()),
   ];
