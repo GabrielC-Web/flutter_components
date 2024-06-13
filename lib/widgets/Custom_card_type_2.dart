@@ -3,8 +3,10 @@ import 'package:flutter_components_1/theme/app_theme.dart';
 
 class CustomCardType2 extends StatelessWidget {
   final String imageSource;
+  final String? imageDescription;
 
-  const CustomCardType2({super.key, required this.imageSource});
+  const CustomCardType2(
+      {super.key, required this.imageSource, this.imageDescription});
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +25,12 @@ class CustomCardType2 extends StatelessWidget {
             placeholder: const AssetImage('assets/icegif-1264.gif'),
             fadeInDuration: const Duration(milliseconds: 300),
           ),
-          Container(
-            alignment: AlignmentDirectional.centerEnd,
-            padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
-            child: const Text('Eren Jaeger'),
-          )
+          if (imageDescription != null)
+            Container(
+              alignment: AlignmentDirectional.centerEnd,
+              padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
+              child: Text(imageDescription ?? 'No hay titulo'),
+            )
         ],
       ),
     );

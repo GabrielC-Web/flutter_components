@@ -21,6 +21,7 @@ class CardScreen extends StatelessWidget {
             CustomCardType2(
               imageSource:
                   'https://cdn.alfabetajuega.com/alfabetajuega/2020/10/eren-jaeger.jpg',
+              imageDescription: 'Eren Jaeger',
             ),
             SizedBox(
               height: 10,
@@ -28,6 +29,7 @@ class CardScreen extends StatelessWidget {
             CustomCardType2(
               imageSource:
                   'https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?cs=srgb&dl=pexels-fotios-photos-1107717.jpg&fm=jpg',
+              imageDescription: 'Super paisaje',
             ),
             SizedBox(
               height: 10,
@@ -35,12 +37,14 @@ class CardScreen extends StatelessWidget {
             CustomCardType2(
               imageSource:
                   'https://switzerland-tour.com/storage/media/4-ForArticles/swiss-mountains.jpg',
+              // imageDescription: 'Suiza, bro',
             ),
             SizedBox(
               height: 10,
             ),
             CustomCardType2(
               imageSource: 'https://images.alphacoders.com/134/1341414.png',
+              imageDescription: 'No chigüires around',
             ),
           ],
         ));
