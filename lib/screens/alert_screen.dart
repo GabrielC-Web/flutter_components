@@ -1,9 +1,12 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AlertScreen extends StatelessWidget {
   const AlertScreen({super.key});
 
-  void displayDialog(BuildContext context) {
+  void displayAndroidDialog(BuildContext context) {
     showDialog(
         barrierDismissible: true,
         context: context,
@@ -26,8 +29,51 @@ class AlertScreen extends StatelessWidget {
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
-                child: const Text('Cancelar'),
-              )
+                child: const Text(
+                  'Cancelar',
+                  style: TextStyle(color: Colors.red),
+                ),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Aceptar'),
+              ),
+            ],
+          );
+        });
+  }
+
+  void displayIOSDialog(BuildContext context) {
+    showCupertinoDialog(
+        barrierDismissible: true,
+        context: context,
+        builder: (context) {
+          return CupertinoAlertDialog(
+            title: const Text('Hello, there'),
+            content: const Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text("It's 3am in the morning"),
+                SizedBox(
+                  height: 10,
+                ),
+                FlutterLogo(
+                  size: 100,
+                )
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text(
+                  'Cancelar',
+                  style: TextStyle(color: Colors.red),
+                ),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Aceptar'),
+              ),
             ],
           );
         });
@@ -42,7 +88,9 @@ class AlertScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-            onPressed: () => displayDialog(context),
+            onPressed: () => Platform.isAndroid
+                ? displayAndroidDialog(context)
+                : displayIOSDialog(context),
             child: const Text('Mostrar alerta')),
       ),
       floatingActionButton: FloatingActionButton(
