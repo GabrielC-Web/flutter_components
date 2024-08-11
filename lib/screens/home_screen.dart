@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_components_1/router/app_routes.dart';
-import 'package:flutter_components_1/screens/listview1_screen.dart';
 import 'package:flutter_components_1/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
