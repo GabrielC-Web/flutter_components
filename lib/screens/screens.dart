@@ -5,3 +5,4 @@ export 'package:flutter_components_1/screens/listview2_screen.dart';
 export 'package:flutter_components_1/screens/home_screen.dart';
 export 'package:flutter_components_1/screens/avatar_screen.dart';
 export 'package:flutter_components_1/screens/animated_screen.dart';
+export 'package:flutter_components_1/screens/form_screen.dart';
